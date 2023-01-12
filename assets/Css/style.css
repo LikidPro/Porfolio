@@ -1,0 +1,1173 @@
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Inconsolata', monospace; 
+   /*  border: solid .1rem red; */
+    }
+    /* loader */
+   .loader-full{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /*  animation: entradaLoader 2s ; */
+    z-index: 3;
+    
+   }
+   @keyframes entradaLoader {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+   }
+    .spinner:before {
+        transform: rotateX(60deg) rotateY(45deg) rotateZ(45deg);
+        animation: 750ms rotateBefore infinite linear reverse;
+      
+      }
+      
+      .spinner:after {
+        transform: rotateX(240deg) rotateY(45deg) rotateZ(45deg);
+        animation: 750ms rotateAfter infinite linear;
+      }
+      
+      .spinner:before,
+      .spinner:after {
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        position: absolute;
+        margin-top: -5em;
+        margin-left: -5em;
+        width: 10em;
+        height: 10em;
+        transform-style: preserve-3d;
+        transform-origin: 50%;
+        transform: rotateY(50%);
+        perspective-origin: 50% 50%;
+        perspective: 340px;
+        background-size: 10em 10em;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjI2NnB4IiBoZWlnaHQ9IjI5N3B4IiB2aWV3Qm94PSIwIDAgMjY2IDI5NyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8dGl0bGU+c3Bpbm5lcjwvdGl0bGU+CiAgICA8ZGVzY3JpcHRpb24+Q3JlYXRlZCB3aXRoIFNrZXRjaCAoaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoKTwvZGVzY3JpcHRpb24+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4KICAgICAgICA8cGF0aCBkPSJNMTcxLjUwNzgxMywzLjI1MDAwMDM4IEMyMjYuMjA4MTgzLDEyLjg1NzcxMTEgMjk3LjExMjcyMiw3MS40OTEyODIzIDI1MC44OTU1OTksMTA4LjQxMDE1NSBDMjE2LjU4MjAyNCwxMzUuODIwMzEgMTg2LjUyODQwNSw5Ny4wNjI0OTY0IDE1Ni44MDA3NzQsODUuNzczNDM0NiBDMTI3LjA3MzE0Myw3NC40ODQzNzIxIDc2Ljg4ODQ2MzIsODQuMjE2MTQ2MiA2MC4xMjg5MDY1LDEwOC40MTAxNTMgQy0xNS45ODA0Njg1LDIxOC4yODEyNDcgMTQ1LjI3NzM0NCwyOTYuNjY3OTY4IDE0NS4yNzczNDQsMjk2LjY2Nzk2OCBDMTQ1LjI3NzM0NCwyOTYuNjY3OTY4IC0yNS40NDkyMTg3LDI1Ny4yNDIxOTggMy4zOTg0Mzc1LDEwOC40MTAxNTUgQzE2LjMwNzA2NjEsNDEuODExNDE3NCA4NC43Mjc1ODI5LC0xMS45OTIyOTg1IDE3MS41MDc4MTMsMy4yNTAwMDAzOCBaIiBpZD0iUGF0aC0xIiBmaWxsPSIjMDAwMDAwIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+CiAgICA8L2c+Cjwvc3ZnPg==);
+      }
+    
+      @keyframes rotateBefore {
+        from {
+          transform: rotateX(60deg) rotateY(45deg) rotateZ(0deg);
+        }
+      
+        to {
+          transform: rotateX(60deg) rotateY(45deg) rotateZ(-360deg);
+        }
+      }
+      
+      @keyframes rotateAfter {
+        from {
+          transform: rotateX(240deg) rotateY(45deg) rotateZ(0deg);
+        }
+      
+        to {
+          transform: rotateX(240deg) rotateY(45deg) rotateZ(360deg);
+        }
+      }
+    main{
+        height: 100vh;
+        width: 100%;
+       /*  background-color: black; */
+        background-image: url("../IMG/perfil.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: space-around;
+       
+      }
+      h1{
+        font-size: 5rem;
+        color: rgb(57, 43, 43);
+        font-weight: bolder;
+        background-color: rgba(255, 255, 255, 0.623);
+        border-radius: 2rem;
+        padding: 1rem;
+    
+
+      }
+      h2{
+        width: 40%;
+        text-align: center;
+        font-size: 3rem;
+        color: rgb(57, 43, 43);
+        font-weight: bolder;
+        background-color: rgba(255, 255, 255, 0.845);
+        border-radius: 2rem;
+        padding: 1rem;
+    
+
+      }
+      .contenedor-selector-de-stylo{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 60%;
+        align-items:center ;
+
+      }
+      @keyframes sombra {
+        0%{
+            box-shadow: #727272 2px 5px 5px 2px;
+        }
+        50%{
+            box-shadow: #ffffff 2px 5px 5px 2px;
+        }
+        100%{
+            box-shadow: #727272 2px 5px 5px 2px;
+          
+        }
+        
+      }
+      .contenedor-selector-de-stylo h3{
+        font-size: 2rem;
+        color: rgb(57, 43, 43);
+        font-weight: bolder;
+        background-color: rgba(255, 255, 255, 0.478);
+        border-radius: 2rem;
+        padding: 1rem;
+    
+      }
+      .selector-de-stylo{
+        display: flex;
+        width: 100%;
+        height: 90%;
+        border-radius: 2rem;
+        animation: sombra 3s infinite;
+        flex-wrap: wrap;
+      }
+      .texto-seleccion-elemento{
+        font-size: 1rem;
+      }
+    
+    .background-one {
+        background-color: transparent;
+        width: 25%;
+        border-right: #5f5d5d84 .1rem solid;
+       
+      }
+      
+      .background-two {
+        background-color: transparent;
+        width: 25%;
+        border-right: #5f5d5d84 .1rem solid;
+      }
+      
+      .background-three {
+        background-color: transparent;
+        width: 25%;
+        border-right: #5f5d5d84 .1rem solid;
+      }
+      .background-four{
+        background-color: transparent;
+        width: 25%;
+      }
+      .link-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+      }
+      
+      button {
+        background-color: transparent;
+        font-size:3rem !important;
+    
+        border: none;
+        text-decoration: underline;
+       
+      
+      }
+      
+      .link-one {
+        color: #605757;
+        -webkit-text-stroke: .3px white;
+       /*  color: #6ec2bd; */
+        transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+        line-height: 1em;
+      }
+      
+      .link-one:hover {
+        color: #5a7d8e;
+        transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);       
+      }
+      
+      .link-one::before {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url("https://a-static.besthdwallpaper.com/sunlight-behind-blue-sky-and-white-clouds-wallpaper-2560x1600-105881_7.jpg");
+        background-size: auto;
+        clip-path: circle(0% at 50% calc(50%));
+        transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+        border-radius: 2rem 0rem 0rem 2rem;
+
+      }
+      
+      .link-one:hover::before {
+        clip-path: circle(100% at 50% 50%);
+      }
+      
+      .link-one::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #C1DEEC;
+        clip-path: polygon(
+          40% 0%,
+          60% 0%,
+          60% 0%,
+          40% 0%,
+          40% 100%,
+          60% 100%,
+          60% 100%,
+          40% 100%
+        );
+      
+        transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      
+      .link-one:hover::after {
+     
+        clip-path: polygon(
+          40% 10%,
+          60% 10%,
+          60% 35%,
+          40% 35%,
+          40% 90%,
+          60% 90%,
+          60% 65%,
+          40% 65%
+        );
+      }
+      
+      .link-two {
+        color: #605757;
+        -webkit-text-stroke: .3px white;
+        /* color: #EB9C43; */
+        transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+      }
+      
+      .link-two:hover {
+        color: #EB9C43;
+        transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+      }
+      
+      .link-two::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        clip-path: polygon(
+          0% -20%,
+          100% -30%,
+          100% -10%,
+          0% 0%,
+          0% 130%,
+          100% 120%,
+          100% 100%,
+          0% 110%
+        );
+
+        background-image: url("https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/07/fuego.jpeg?fit=2241%2C1500&quality=50&strip=all&ssl=1");
+        background-size: cover;   
+        transition: clip-path 1s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      
+      .link-two:hover::before {
+        clip-path: polygon(
+          0% 10%,
+          100% 0%,
+          100% 60%,
+          0% 30%,
+          0% 100%,
+          100% 90%,
+          100% 70%,
+          0% 50%
+        );
+      }
+      
+      .link-two::after {
+        position: absolute;
+        z-index: -1;
+        width: 5ch;
+        height: 5ch;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%) rotate(0deg) scale(0);
+        transition: transform 1s ease;
+        background-image: url("https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2018/07/fuego.jpeg?fit=2241%2C1500&quality=50&strip=all&ssl=1");
+        background-size: cover;
+      }
+      
+      .link-two:hover::after {
+
+        transform: translate(50%, -50%) rotate(135deg) scale(1);
+      }
+      
+      .link-three {
+        color: #605757;
+        -webkit-text-stroke: .3px white;
+      /*   color: #eb7132; */
+      }
+          
+      .link-three::after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        width: 50%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        transform: translate(0, -50%) scaleY(0);
+        transition: transform 1s ease;
+        mix-blend-mode: difference;
+    /*     clip-path: polygon(
+          0% 50%,
+          100% 60%,
+          100% 40%,
+          20% 40%,
+          60% 50%,
+          60% 50%,
+          70% 10%,
+          10% 20%
+    ); */
+        background-image: url("https://img.freepik.com/foto-gratis/textura-tierra-seca-agrietada_1232-3135.jpg?w=2000");
+        background-size: cover;
+        background-position: left;
+      }   
+      .link-three:hover::after {
+        transform: translate(0, 0%) scaleY(1);
+           
+      }
+      
+      .link-three::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        height: 100%;
+        bottom: 0%;
+        right: 0%;
+        transform: translate(0, 50%) scaleY(0);
+        transition: transform 1s ease;
+        mix-blend-mode: difference;
+       /*  clip-path: polygon(
+          50% 40%,
+          0% 20%,
+          0% 70%,
+          90% 60%,
+          90% 100%,
+          40% 100%,
+          10% 80%,
+          10% 80%
+        );  */  
+        background-image: url("https://img.freepik.com/foto-gratis/textura-tierra-seca-agrietada_1232-3135.jpg?w=2000");
+     /*    background-position: right ; */
+     background-size: cover;
+     background-position: left;
+
+
+      }
+      
+      .link-three:hover::before {
+        transform: translate(0%, 0%) scaleY(1);
+        
+      }
+      .link-three:hover {     
+        transition: color 3s cubic-bezier(0.33, 1, 0.68, 1);
+        color: black;
+      }
+      .link-four {
+        color: #605757;
+        -webkit-text-stroke: .3px white;
+    /*     color: #0659a7; */
+        transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+        line-height: 1em;
+     
+      }
+      
+      .link-four:hover {
+        color: #5a7d8e;
+        transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);       
+      }
+      
+      .link-four::before {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url("https://i.pinimg.com/originals/61/ec/f9/61ecf94f723a1aeb96750a949856863b.jpg");
+        background-size: auto;
+        clip-path: circle(0% at 50% calc(50%));
+        transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+        border-radius: 0rem 2rem 2rem 0;
+      }
+      
+      .link-four:hover::before {
+        clip-path: circle(100% at 50% 50%);
+      }
+      
+      .link-four::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #00aaff;
+        clip-path: polygon(
+          40% 0%,
+          60% 0%,
+          60% 0%,
+          40% 0%,
+          40% 100%,
+          60% 100%,
+          60% 100%,
+          40% 100%
+        );
+      
+        transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      
+      .link-four:hover::after {
+     
+        clip-path: polygon(
+          40% 10%,
+          60% 10%,
+          60% 35%,
+          40% 35%,
+          40% 90%,
+          60% 90%,
+          60% 65%,
+          40% 65%
+        );
+      }
+      
+      
+      /* Seccion Aire */
+      .contenedor-seccion-aire{
+        height: 100%;
+        width: 100%;
+      }
+      .articulo-aire{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .sobre-mi{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        width: 80%;
+        height: 60%;
+        border-radius: 2rem;
+        animation: sobrasSobreMi 6s infinite;
+      }
+      .sobre-mi h4{
+        width: 60%;
+        background-color: #1a1d228d;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: white;
+      }
+      @keyframes sobrasSobreMi {
+        0%{
+            box-shadow: 5px 5px 5px 6px #e3e3e3;
+        }
+        50%{
+            box-shadow: 5px 5px 10px 6px #B3A48B;
+
+        }
+        100%{
+            box-shadow: 5px 5px 10px 6px #e5e5e5;
+
+        }  
+     }
+        @keyframes sobrastecnologias {
+            0%{
+                box-shadow: 5px 5px 5px 6px #A8660C;
+            }
+            50%{
+                box-shadow: 5px 5px 10px 6px black;
+    
+            }
+            100%{
+                box-shadow: 5px 5px 10px 6px #A8660C;
+    
+            }
+      }
+       /* Seccion Fuego */
+      .contenedor-seccion-fuego{
+        height: 100%;
+        width: 100%;
+        
+      }
+      .articulo-fuego{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .tecnologias{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        border-radius: 2rem;
+        animation: sobrastecnologias 6s infinite;
+        
+      }
+      .contenedor-cards-tecnologias{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        height: 90%;
+        width: 100%;
+
+      }
+      .titulo-tecnologias{
+        background-color: #d8c218b9;
+        color: white;
+      }
+      .cards{
+        width: 10%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .Img-tecnologias{
+        width: 100%;
+        height: 100%;
+      }
+      p{
+    
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+      }
+       /* Seccion Tierra */
+      .contenedor-seccion-tierra{
+        height: 100%;
+        width: 100%;
+    
+      }
+      .articulo-tierra{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+      .titulo-tierra{
+        background-color: #60361cb2;
+        color: white;
+      }
+      .contenedor-carrusel{
+        height: 80%;
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 500px 100px;
+        grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+        align-items: center;
+        justify-items: center;
+        z-index: 4;
+      }
+      #carousel {
+        grid-row: 1 / 3;
+        grid-column: 1 / 8;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        perspective: 600px;
+        --items: 5;
+        --middle: 3;
+        --position: 1;
+        pointer-events: none;
+        z-index: 5;
+      }
+      
+      div.item {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        background-color: coral;
+        --r: calc(var(--position) - var(--offset));
+        --abs: max(calc(var(--r) * -1), var(--r));
+        transition: all 0.25s linear;
+        transform: rotateY(calc(-10deg * var(--r)))
+          translateX(calc(-300px * var(--r)));
+        z-index: calc((var(--position) - var(--abs)));
+        border-radius: 2rem;
+       
+    
+      }
+      .proyecto1{
+        box-shadow: 2px 5px 5px 2px #545657;
+        border-radius: 2rem;
+      }
+      
+      
+      div.item:nth-of-type(1) {
+        --offset: 1;
+        background-color: #90f1ef;
+      }
+      div.item:nth-of-type(2) {
+        --offset: 2;
+        background-color: #ff70a6;
+      }
+      div.item:nth-of-type(3) {
+        --offset: 3;
+        background-color: #ff9770;
+      }
+      div.item:nth-of-type(4) {
+        --offset: 4;
+        background-color: #ffd670;
+      }
+      div.item:nth-of-type(5) {
+        --offset: 5;
+        background-color: #e9ff70;
+      }
+      
+      input:nth-of-type(1) {
+        grid-column: 2 / 3;
+        grid-row: 3 /5 ;
+      }
+      input:nth-of-type(1):checked ~ #carousel {
+        --position: 1;
+      }
+      
+      input:nth-of-type(2) {
+        grid-column: 3 / 4;
+        grid-row: 3 /5 ;
+      }
+      input:nth-of-type(2):checked ~ #carousel {
+        --position: 2;
+      }
+      
+      input:nth-of-type(3) {
+        grid-column: 4 /5;
+        grid-row: 3 /5 ;
+      }
+      input:nth-of-type(3):checked ~ #carousel {
+        --position: 3;
+      }
+      
+      input:nth-of-type(4) {
+        grid-column: 5 / 6;
+        grid-row: 3 /5 ;
+      }
+      input:nth-of-type(4):checked ~ #carousel {
+        --position: 4;
+      }
+      
+      input:nth-of-type(5) {
+        grid-column: 6 / 7;
+        grid-row: 3 /5 ;
+      }
+      input:nth-of-type(5):checked ~ #carousel {
+        --position: 5;
+      }
+      
+      .cta {
+        position: relative;
+        margin: auto;
+        padding: 12px 18px;
+        transition: all 0.2s ease;
+        border: none;
+        background: none;
+        text-decoration: none;
+        grid-column: 1/8;
+       }
+       
+       .cta:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 50px;
+        background: #9c5b33;
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease;
+       }
+       
+       .cta span {
+        position: relative;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: white;
+       }
+       
+       .cta svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: white;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+       }
+       
+       .cta:hover:before {
+        width: 100%;
+        background:#60361C;
+       }
+       
+       .cta:hover svg {
+        transform: translateX(0);
+       }
+       
+       .cta:active {
+        transform: scale(0.95);
+       }
+      /* Seccion Agua */
+      .contenedor-seccion-agua{
+        height: 100%;
+        width: 100%;
+      }
+      .articulo-agua{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .titulo-contacto{
+        background-color: #95dcff93;
+        color: white;
+        
+      }
+      .contenedor-links-redes{
+        height: 60%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        gap: 2rem;
+        z-index: 5;
+      }
+      .link-img-red{
+        width: 20%;
+        height: 40%;
+      }
+      .img-red{
+        width: 100%;
+        height: 100%;
+      }
+
+      .control-display{
+        display: none;
+      }
+      video{
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+     
+      }
+     
+      .shadow__btn {
+        padding: 10px 20px;
+        border: none;
+        font-size: 17px;
+        color: #fff;
+        border-radius: 7px;
+        letter-spacing: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.5s;
+        transition-property: box-shadow;
+        text-decoration: none;
+        z-index: 5;
+      }
+      
+      .shadow__btn {
+        background: #564f4476;
+        box-shadow: 0 0 25px #C3B39C;
+      }
+      .shadow__btn:hover {
+        box-shadow: 0 0 5px #C3B39C,
+                    0 0 25px #C3B39C,
+                    0 0 50px #C3B39C,
+                    0 0 100px #C3B39C
+      }
+      @media screen and (max-width:1400px){
+        .sobre-mi{
+          height: 80%;
+        }
+        .sobre-mi h4{
+          width: 90%;
+        
+        }
+      
+        .contenedor-carrusel{
+          height: 80%;
+          width: 100%;
+          display: grid;
+          grid-template-rows: 200px 100px;
+          grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+        
+        }
+        #carousel {
+          grid-row: 1 / 8;
+          grid-column: 1 / 10;
+          width: 100%;
+          height: 70%;      
+        } 
+        div.item {       
+          width: 40%;
+          height: 100%;     
+        }
+        .proyecto1{
+          box-shadow: 2px 5px 5px 2px #545657;
+          border-radius: 2rem;
+        }        
+        input:nth-of-type(1) {   
+          grid-row: 8 / 10  ;
+        }
+      
+        input:nth-of-type(2) {
+         
+          grid-row: 8 / 10  ;
+        }     
+        input:nth-of-type(3) {       
+          grid-row: 8 / 10  ;
+        }
+        input:nth-of-type(4) {      
+          grid-row: 8 / 10  ;
+        }     
+        /* Seccion Agua */        
+        .contenedor-links-redes{
+          width: 100%;
+        
+         
+        }
+        .link-img-red {
+          width: 20%;
+          height: 45%;
+      }
+
+      }
+      @media screen and (max-width:800px){
+        video{
+          display: none;
+        }
+        .proyecto1{
+          display: flex;
+        }
+        /* Seccion Agua */
+        .articulo-agua{
+          background-image: url("https://image.winudf.com/v2/image/c2F0c3VtYS5zZWEud2FsbHBhcGVyc19zY3JlZW5fMV81Ym1uODQzdw/screen-1.jpg?h=355&fakeurl=1&type=.jpg");
+          background-position: center;
+          background-size: cover;
+          height: 140vh;
+        }
+        .contenedor-links-redes{
+          width: 100%;
+          flex-wrap: wrap;
+         
+        }
+        .link-img-red {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40%;
+          height: 50%;
+      }
+      .img-red{
+        width: 70%;
+        height: 80%;
+      }
+        h1{     
+          border-radius: 0rem;
+          width: 100%;
+          text-align: center;
+      
+  
+        }
+        h2{
+          width: 80%;
+          text-align: center;
+          font-size: 3rem;
+          color: rgb(57, 43, 43);
+          font-weight: bolder;
+          background-color: rgba(255, 255, 255, 0.845);
+          border-radius: 2rem;
+          padding: 1rem;
+      
+  
+        }
+        .contenedor-selector-de-stylo{
+          display: flex;
+          flex-direction: column;
+          width: 95%;
+          height: 70%;
+          align-items:center ;
+  
+        }
+     
+        .contenedor-selector-de-stylo h3{
+          width: 100%;
+      
+          font-size: 1.5rem;
+          text-align: center;
+      
+        }
+        .selector-de-stylo{
+          flex-direction: column;
+          height: 100%;
+          flex-wrap: nowrap;
+        }
+        .texto-seleccion-elemento{
+          font-size: 1rem;
+        }
+      
+      .background-one {    
+          height: 25%;    
+          width: 100%;        
+          border: none;
+          border-bottom:#bebebe 1px solid;
+        }
+        
+        .background-two {       
+          width: 100%;        
+          height: 25%;  
+          border-bottom:#bebebe 1px solid;
+        }
+        
+        .background-three {    
+          width: 100%;     
+          height: 25%; 
+          border-bottom:#bebebe 1px solid;     
+        }
+        .background-four{      
+          width: 100%;
+          height: 25%;  
+        }
+      
+        .link-one::before {
+        
+          border-radius: 2rem 2rem 0rem 0rem;
+  
+        }
+         
+        .link-four::before {
+         
+          border-radius: 0rem 0rem 2rem 2rem;
+        }
+        /* Seccion aire */
+      
+        .contenedor-seccion-aire{
+          min-height: 120vh;
+          background-image: url("../IMG/Cielo.jpg");
+          background-position: center;
+          background-size: cover;
+        }
+        .articulo-aire{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          position:static;
+          width: 100%;
+          height: 100%;
+        }
+        .sobre-mi{
+          display: flex;
+          flex-direction: column;
+          justify-content:center ;
+          align-items: center;
+          width: 100%;
+          height: 90%;
+          animation: none;
+      
+        }
+        .sobre-mi h4{
+          width: 90%;
+          background-color: #1a1d228d;
+          padding: 1rem;
+          border-radius: 2rem;
+          color: white;
+        }
+       
+        /* Seccion Fuego */
+        .contenedor-seccion-fuego{
+          min-height: 100%;
+          width: 100%;
+          background-image: url("../IMG/Fuego.jpg");
+          background-size: cover;
+          background-position: center;
+          
+        }
+        .articulo-fuego{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          position: static;
+          width: 100%;
+          height: 100%;
+        }
+        .tecnologias{
+          display: flex;
+          flex-direction: column;
+          padding: 2px;
+          gap: 1rem;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          border-radius: 2rem;
+          animation: none
+          
+        }
+        .contenedor-cards-tecnologias{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          align-content: space-around;
+          gap: .5rem;
+          height: 90%;
+          width: 100%;
+  
+        }
+        .titulo-tecnologias{
+          background-color: #d8c218b9;
+          color: white;
+        }
+        .cards{
+          width: 17%;
+          height: 20%;
+       
+        }
+        .Img-tecnologias{
+          width: 100%;
+          height: 100%;
+        }
+        p{
+      
+          text-align: center;
+          color: white;
+          font-size: 1rem;
+        }
+        /* Seccion Tierra */
+        .contenedor-seccion-tierra{
+          background-image: url("../IMG/tierra.jpg");
+          background-position: center;
+
+        }
+              
+       
+        div.item {       
+          width: 60%;
+          height: 100%;     
+        }
+ 
+      }
+     
+      @media screen and (max-width:487px){
+        main{
+          min-height: 140vh ;
+         
+        }
+        .sobre-mi h4{
+          width: 100%;
+        }
+        .cards{
+          width: 20%;
+          height: 20%;
+       
+        }
+           /* Seccion Tierra */
+           .contenedor-seccion-tierra{
+            height: 140vh;
+            width: 100%;
+          
+        
+          }
+          .articulo-tierra{
+         height: 140vh;
+          }
+          .titulo-tierra{
+            background-color: #60361cb2;
+            color: white;
+          }
+          .contenedor-carrusel{
+            height: 90%;
+        
+           /*  grid-template-rows: 500px 100px;
+            grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; */
+          
+          }
+          .img-red{
+            width: 100%;
+            height: 80%;
+          }
+
+      }
