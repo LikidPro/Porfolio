@@ -829,7 +829,7 @@
       }
 
       .control-display{
-        display: none;
+        display: none !important;
       }
       video{
         height: 100%;
@@ -927,12 +927,20 @@
         .proyecto1{
           display: flex;
         }
+        .contenedor-seccion-aire{
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+        }
+        .articulo-aire{
+          padding: 20px;
+        }
         /* Seccion Agua */
         .articulo-agua{
           background-image: url("https://image.winudf.com/v2/image/c2F0c3VtYS5zZWEud2FsbHBhcGVyc19zY3JlZW5fMV81Ym1uODQzdw/screen-1.jpg?h=355&fakeurl=1&type=.jpg");
           background-position: center;
           background-size: cover;
-          height: 140vh;
+          min-height:100vh;
         }
         .contenedor-links-redes{
           width: 100%;
@@ -1030,7 +1038,7 @@
         /* Seccion aire */
       
         .contenedor-seccion-aire{
-          min-height: 120vh;
+         
           background-image: url("../IMG/Cielo.jpg");
           background-position: center;
           background-size: cover;
@@ -1139,7 +1147,7 @@
      
       @media screen and (max-width:487px){
         main{
-          min-height: 140vh ;
+          height: fit-content ;
          
         }
         .sobre-mi h4{
@@ -1152,13 +1160,13 @@
         }
            /* Seccion Tierra */
            .contenedor-seccion-tierra{
-            height: 140vh;
+            height: fit-content;
             width: 100%;
           
         
           }
           .articulo-tierra{
-         height: 140vh;
+         height: fit-content;
           }
           .titulo-tierra{
             background-color: #60361cb2;

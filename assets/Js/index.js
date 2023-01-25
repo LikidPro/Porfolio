@@ -100,12 +100,12 @@ const { createApp } = Vue
         let loader = document.getElementById('contenedor-loader');
         let loader1 = document.getElementById("loader")
       
+        seccionAire.classList.add("control-display")
+        seccionFuego.classList.add("control-display")
+        seccionTierra.classList.add("control-display")
+        seccionAgua.classList.add("control-display")
             loader.classList.remove("control-display")
             loader.classList.add("loader-full") ;
-            seccionAire.classList.add("control-display")
-            seccionFuego.classList.add("control-display")
-            seccionTierra.classList.add("control-display")
-            seccionAgua.classList.add("control-display")
             seleccionDeElemento.style.display = "flex"
             titulo.style.display = "block"
             titulo2.style.display = "block"
