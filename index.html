@@ -23,27 +23,30 @@
 
             <div id="loader" class="spinner " ></div>
         </div>
-        <h1 class="animate__animated animate__fadeInLeft"  id="titulo-presentacion">Bienvenido a mi portfolio</h1>
-        <h2 class="animate__animated animate__fadeInRight " id="titulo-presentacion2">David Garcia Desarrollador FullStack JAVA</h2>
-        <section id="SeleccionDeElemento" class="contenedor-selector-de-stylo animate__animated animate__zoomIn  animate__delay-1s">
-            <h3 class="animate__animated animate__fadeInRight animate__delay-2s"> Selecciona un elemento</h3>
-            <section class="selector-de-stylo ">
-                <div class="background-one">
-                    <div class="link-container">
-                      <button  @click="elegirStylo('aire')" class="link-one" href="">Aire <span class="texto-seleccion-elemento">Sobre mi</span></button>
-                    </div>
-                  </div>
-                  <div class="background-two link-container">
-                    <button  @click="elegirStylo('fuego')" class="link-two" href="">Fuego <span class="texto-seleccion-elemento">Habilidades</span></button>
-                  </div>
-                  <div class="background-three link-container">
-                    <button @click="elegirStylo('tierra')" class="link-three" href="">Tierra <span class="texto-seleccion-elemento">Proyectos</span></button>
-                  </div>
-                  <div class="background-four link-container">                 
-                      <button  @click="elegirStylo('agua')" class="link-four" href="">Agua <span class="texto-seleccion-elemento">Contacto</span></button>
-                  </div>
-            </section>  
-        </section>
+        <div id="SeleccionDeElemento" class="seccion-inicial">
+            <h1 class="animate__animated animate__fadeInLeft"  id="titulo-presentacion">Bienvenido a mi portfolio</h1>
+            <h2 class="animate__animated animate__fadeInRight " id="titulo-presentacion2">David Garcia Desarrollador FullStack JAVA</h2>
+            <section  class="contenedor-selector-de-stylo animate__animated animate__zoomIn  animate__delay-1s">
+                <h3 class="animate__animated animate__fadeInRight animate__delay-2s"> Selecciona un elemento</h3>
+                <section class="selector-de-stylo ">
+                    <div class="background-one">
+                        <div class="link-container">
+                          <button  @click="elegirStylo('aire')" class="link-one" href="">Aire <span class="texto-seleccion-elemento">Sobre mi</span></button>
+                        </div>
+                      </div>
+                      <div class="background-two link-container">
+                        <button  @click="elegirStylo('fuego')" class="link-two" href="">Fuego <span class="texto-seleccion-elemento">Habilidades</span></button>
+                      </div>
+                      <div class="background-three link-container">
+                        <button @click="elegirStylo('tierra')" class="link-three" href="">Tierra <span class="texto-seleccion-elemento">Proyectos</span></button>
+                      </div>
+                      <div class="background-four link-container">                 
+                          <button  @click="elegirStylo('agua')" class="link-four" href="">Agua <span class="texto-seleccion-elemento">Contacto</span></button>
+                      </div>
+                </section>  
+            </section>
+        </div>
+    
         <section id="seccionAire" class="contenedor-seccion-aire control-display">
             <article class="articulo-aire">   
                 <div class="sobre-mi">

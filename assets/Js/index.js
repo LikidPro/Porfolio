@@ -26,13 +26,14 @@ const { createApp } = Vue
         if(elemento == "aire"){
             loader.classList.remove("control-display")
             loader.classList.add("loader-full") ;
+            seleccionDeElemento.style.display = "none"
+            titulo.style.display = "none"
+            titulo2.style.display = "none"
+            seccionAire.classList.remove("control-display")
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
-              seleccionDeElemento.style.display = "none"
-              titulo.style.display = "none"
-              titulo2.style.display = "none"
-              seccionAire.classList.remove("control-display")
+            
            
             }, 2000);
            
@@ -41,14 +42,15 @@ const { createApp } = Vue
         if(elemento == "fuego"){
             loader.classList.remove("control-display")
             loader.classList.add("loader-full") ;
+            seleccionDeElemento.style.display = "none"
+            titulo.style.display = "none"
+            titulo2.style.display = "none"
+            seccionFuego.classList.remove("control-display")
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
 
-              seleccionDeElemento.style.display = "none"
-              titulo.style.display = "none"
-              titulo2.style.display = "none"
-              seccionFuego.classList.remove("control-display")
+            
             
             }, 2000);
             
@@ -56,14 +58,15 @@ const { createApp } = Vue
         if(elemento == "tierra"){
             loader.classList.remove("control-display")
             loader.classList.add("loader-full") ;
+            seleccionDeElemento.style.display = "none"
+            titulo.style.display = "none"
+            titulo2.style.display = "none"
+            seccionTierra.classList.remove("control-display")
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
 
-              seleccionDeElemento.style.display = "none"
-              titulo.style.display = "none"
-              titulo2.style.display = "none"
-              seccionTierra.classList.remove("control-display")
+            
           
             }, 2000);
  
@@ -71,14 +74,15 @@ const { createApp } = Vue
         if(elemento == "agua"){
             loader.classList.remove("control-display")
             loader.classList.add("loader-full") ;
+            seleccionDeElemento.style.display = "none"
+            titulo.style.display = "none"
+            titulo2.style.display = "none"
+            seccionAgua.classList.remove("control-display")
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
 
-              seleccionDeElemento.style.display = "none"
-              titulo.style.display = "none"
-              titulo2.style.display = "none"
-              seccionAgua.classList.remove("control-display")
+           
           
             }, 2000);
  
@@ -102,13 +106,14 @@ const { createApp } = Vue
             seccionFuego.classList.add("control-display")
             seccionTierra.classList.add("control-display")
             seccionAgua.classList.add("control-display")
+            seleccionDeElemento.style.display = "flex"
+            titulo.style.display = "block"
+            titulo2.style.display = "block"
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
 
-              seleccionDeElemento.style.display = "flex"
-              titulo.style.display = "block"
-              titulo2.style.display = "block"
+            
              
              
             }, 2000);
