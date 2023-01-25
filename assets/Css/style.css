@@ -85,6 +85,9 @@
       
        
       }
+      .tamaño-main{
+        height: fit-content;
+      }
       .seccion-inicial{
         height: 100vh;
         width: 100%;
@@ -1146,10 +1149,7 @@
       }
      
       @media screen and (max-width:487px){
-        main{
-          height: fit-content ;
-         
-        }
+      
         .sobre-mi h4{
           width: 100%;
         }
