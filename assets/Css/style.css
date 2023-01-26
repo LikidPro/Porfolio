@@ -1171,7 +1171,13 @@
         }
  
       }
-     
+      @media screen and (max-width:650px){
+
+ div.item {       
+          width: 90%;
+          height: 100%;     
+        }
+      }
       @media screen and (max-width:487px){
       
         .sobre-mi h4{
