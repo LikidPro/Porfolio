@@ -104,16 +104,16 @@ const { createApp } = Vue
         let loader = document.getElementById('contenedor-loader');
         let main = document.getElementById("main")
       
+        loader.classList.remove("control-display")
+        loader.classList.add("loader-full") ;
+        seleccionDeElemento.style.display = "flex"
+        titulo.style.display = "block"
+        titulo2.style.display = "block"
+        main.classList.remove("tamaño-main")
         seccionAire.classList.add("control-display")
         seccionFuego.classList.add("control-display")
         seccionTierra.classList.add("control-display")
         seccionAgua.classList.add("control-display")
-        main.classList.remove("tamaño-main")
-            loader.classList.remove("control-display")
-            loader.classList.add("loader-full") ;
-            seleccionDeElemento.style.display = "flex"
-            titulo.style.display = "block"
-            titulo2.style.display = "block"
             setTimeout(() => {
               loader.classList.remove("loader-full");
               loader.classList.add("control-display")
